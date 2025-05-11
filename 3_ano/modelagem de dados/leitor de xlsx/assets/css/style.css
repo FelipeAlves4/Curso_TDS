@@ -1,0 +1,10 @@
+body {
+    background-color: #f8f9fa;
+  }
+  .card-title {
+    font-weight: 600;
+  }
+  select.form-select {
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+    background-color: #f0f4f8;
+    color: #333;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    background-color: #005bb5;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #0073e6;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+header h2 {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+section {
+    margin: 10px 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #005bb5;
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 5px;
+}
+
+p,
+ul {
+    font-size: 0.9rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#chamada {
+    margin: 20px;
+    text-align: center;
+    background-color: #e6f7ff;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid #b3e0ff;
+}
+
+#chamada p {
+    font-size: 1rem;
+}
+
+#chamada button {
+    margin-top: 20px;
+    background-color: #0073e6;
+    color: white;
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#chamada button:hover {
+    background-color: #005bb5;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #005bb5;
+    color: white;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade para tablets e celulares grandes */
+@media (max-width: 1024px) {
+    body {
+        height: auto;
+        overflow: auto;
+        padding-bottom: 40px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header h2 {
+        font-size: 0.95rem;
+    }
+
+    section {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    p,
+    ul {
+        font-size: 0.85rem;
+    }
+
+    #chamada button {
+        font-size: 0.85rem;
+    }
+
+    footer {
+        font-size: 0.85rem;
+    }
+}
+
+/* Responsividade para telas menores que 768px (tablets e celulares grandes) */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        overflow: auto;
+        padding-bottom: 40px;
+    }
+
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header h2 {
+        font-size: 0.9rem;
+    }
+
+    section {
+        margin: 10px 5px;
+        padding: 8px;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p,
+    ul {
+        font-size: 0.8rem;
+    }
+
+    #chamada button {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
+/* Responsividade para telas de celulares maiores (480px a 600px) */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    header h2 {
+        font-size: 0.85rem;
+    }
+
+    section {
+        margin: 10px 5px;
+        padding: 7px;
+    }
+
+    h3 {
+        font-size: 0.95rem;
+    }
+
+    p,
+    ul {
+        font-size: 0.75rem;
+    }
+
+    #chamada button {
+        font-size: 0.75rem;
+        padding: 6px 10px;
+    }
+
+    footer {
+        font-size: 0.75rem;
+    }
+}
+
+/* Responsividade para celulares menores (até 480px) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    header h2 {
+        font-size: 0.8rem;
+    }
+
+    section {
+        margin: 5px 5px;
+        padding: 8px;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+    }
+
+    p,
+    ul {
+        font-size: 0.7rem;
+    }
+
+    #chamada button {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+
+    footer {
+        font-size: 0.7rem;
+    }
+}

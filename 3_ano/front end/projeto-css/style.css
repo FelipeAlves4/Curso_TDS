@@ -1,0 +1,65 @@
+root {
+    --primary-color: #3498db;
+    /* Azul */
+    --secondary-color: #2ecc71;
+    /* Verde */
+    --font-size-base: 16px;
+    --spacing-base: 10px;
+}
+
+@mixin box-shadow($color, $intensity) {
+    box-shadow: 0 4px $intensity rgba($color, 0.3);
+    /* Aqui você pode ajustar o valor de $color para corresponder ao rgba correto */
+}
+
+
+@mixin responsive-text($min-size, $max-size) {
+    font-size: $min-size;
+
+    @media (min-width: 768px) {
+        font-size: $max-size;
+    }
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-base);
+    @include responsive-text(14px, 18px);
+    /* Aplica o mixin de responsividade */
+
+    &:hover {
+        background-color: var(--secondary-color);
+        @include transition(all, 0.3s);
+        /* Aplica o mixin de transição */
+    }
+}
+
+.card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    @include box-shadow(black, 5px);
+    /* Aplica o mixin de sombra */
+
+    .card-title {
+        color: var(--primary-color);
+        font-size: var(--font-size-large);
+    }
+
+    .card-description {
+        font-size: var(--font-size-base);
+        color: #333;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .card {
+        padding: 10px;
+    }
+
+    .button {
+        font-size: 14px;
+    }
+}
