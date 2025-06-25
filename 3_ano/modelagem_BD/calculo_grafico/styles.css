@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, rgb(10, 238, 227), rgb(2, 122, 138), rgb(0, 29, 34));
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background-color: darkblue;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.dados {
+    max-width: 800px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.in_da {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.padrao {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+}
+
+.gerar {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0074D9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+canvas {
+    margin: 30px auto;
+    display: block;
+    max-width: 800px;
+}

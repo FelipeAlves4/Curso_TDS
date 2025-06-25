@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gerar dados</title>
+</head>
+<body>
+    <header>
+        <h1>Censo dados</h1>
+    </header>
+
+    <section class="dados">
+        <h3>Insira os dados</h3>
+        <div class="in_da">
+            <form>
+
+                <h4>Faixa Etária (Total)</h4>
+                <div class="padrao"><label>Crianças</label><input type="text" id="criancas"></div>
+                <div class="padrao"><label>Jovens</label><input type="text" id="jovens"></div>
+                <div class="padrao"><label>Adultos</label><input type="text" id="adultos"></div>
+                <div class="padrao"><label>Idosos</label><input type="text" id="idosos"></div>
+
+                <h4>Faixa Etária por Sexo</h4>
+                <div class="padrao"><label>Crianças - Mulheres</label><input type="text" id="criancas_mulheres"></div>
+                <div class="padrao"><label>Crianças - Homens</label><input type="text" id="criancas_homens"></div>
+                <div class="padrao"><label>Jovens - Mulheres</label><input type="text" id="jovens_mulheres"></div>
+                <div class="padrao"><label>Jovens - Homens</label><input type="text" id="jovens_homens"></div>
+                <div class="padrao"><label>Adultos - Mulheres</label><input type="text" id="adultos_mulheres"></div>
+                <div class="padrao"><label>Adultos - Homens</label><input type="text" id="adultos_homens"></div>
+                <div class="padrao"><label>Idosos - Mulheres</label><input type="text" id="idosos_mulheres"></div>
+                <div class="padrao"><label>Idosos - Homens</label><input type="text" id="idosos_homens"></div>
+
+                <h4>Regiões</h4>
+                <div class="padrao"><label>Leste</label><input type="text" id="regiao_leste"></div>
+                <div class="padrao"><label>Oeste</label><input type="text" id="regiao_oeste"></div>
+                <div class="padrao"><label>Norte</label><input type="text" id="regiao_norte"></div>
+                <div class="padrao"><label>Sul</label><input type="text" id="regiao_sul"></div>
+
+                <h4>Formação</h4>
+                <div class="padrao"><label>Sem formação</label><input type="text" id="formacao_sem"></div>
+                <div class="padrao"><label>Fundamental</label><input type="text" id="formacao_fundamental"></div>
+                <div class="padrao"><label>Médio</label><input type="text" id="formacao_medio"></div>
+                <div class="padrao"><label>Superior</label><input type="text" id="formacao_superior"></div>
+
+                <h4>Formação Superior Específica</h4>
+                <div class="padrao"><label>Enfermagem</label><input type="text" id="formacao_enfermagem"></div>
+                <div class="padrao"><label>Pedagogia</label><input type="text" id="formacao_pedagogia"></div>
+                <div class="padrao"><label>TI</label><input type="text" id="formacao_ti"></div>
+
+        
+                <h4>População por Ano</h4>
+                <div class="padrao"><label>População em 2022</label><input type="text" id="pop_2022"></div>
+                <div class="padrao"><label>População em 2027</label><input type="text" id="pop_2027"></div>
+
+            </form>
+
+            <button class="gerar" id="grafico">Gerar gráfico</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
