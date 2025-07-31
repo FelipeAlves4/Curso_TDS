@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        grid-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            /* Duas colunas: menu menor e conteúdo maior
+    */
+            grid-template-rows: auto 1fr auto;
+            /* Três linhas: header, conteúdo principal e
+    footer */
+            grid-template-areas:
+                "header header"
+                "menu main"
+                "footer footer";
+            gap: 10px;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .menu {
+            grid-area: menu;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .footer {
+            grid-area: footer;
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+            }
+
+            @media (max-width: 768px) {
+                .grid-container {
+                    grid-template-columns: repeat(2, 1fr);
+                    /* 2 colunas em telas menores */
+                }
+            }
+
+            @media (max-width: 480px) {
+                .grid-container {
+                    grid-template-columns: 1fr;
+                    /* 1 coluna em telas muito pequenas */
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">Header</div>
+        <div class="menu">Menu</div>
+        <div class="main">Main</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>
