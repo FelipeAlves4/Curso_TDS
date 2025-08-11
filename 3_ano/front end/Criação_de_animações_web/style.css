@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1c65d3;
+    font-family: Arial, sans-serif;
+}
+
+.form-container {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+  
+
+
+
+
+form input,
+#entrar {
+    opacity: 0;
+    /* Começa invisível */
+    transform: translateY(50px);
+    /* Deslocado para baixo */
+}
