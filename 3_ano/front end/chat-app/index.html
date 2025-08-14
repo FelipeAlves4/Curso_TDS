@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat em Tempo Real</title>
+</head>
+<body>
+    <div id="chat">
+        <input type="text" id="name" placeholder="Seu nome">
+        <input type="text" id="message" placeholder="Sua mensagem">
+        <button onclick="sendMessage()">Enviar</button>
+        <div id="messages"></div>
+    </div>
+
+    <script>
+        const ws = new WebSocket('ws://localhost:8081');
+
+        ws.onopen = () => {
+            console.log('Conexão WebSocket estabelecida');
+        };
+
+        ws.onmessage = (event) => {
+            if (event.data instanceof Blob) {
+                console.log('Recebido um Blob, convertendo para texto...');
+                const reader = new FileReader();
+                reader.onload = function() {
+                    const messageText = reader.result; // Aqui você terá a mensagem em texto
+                    const messagesDiv = document.getElementById('messages');
+                    messagesDiv.innerHTML += `<p>${messageText}</p>`;
+                };
+                reader.readAsText(event.data); // Converte o Blob para texto
+            } else {
+                const messagesDiv = document.getElementById('messages');
+                messagesDiv.innerHTML += `<p>${event.data}</p>`;
+            }
+        };
+
+        ws.onerror = (error) => {
+            console.error('Erro no WebSocket:', error);
+        };
+
+        ws.onclose = () => {
+            console.log('Conexão WebSocket fechada');
+        };
+
+        function sendMessage() {
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+
+            if (name && message) { // Verifica se os campos não estão vazios
+                ws.send(`${name}: ${message}`);
+                document.getElementById('message').value = '';
+            } else {
+                alert('Por favor, preencha seu nome e a mensagem.');
+            }
+        }
+    </script>
+</body>
+</html>
