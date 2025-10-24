@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Inscrição - Concurso 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container main-container">
+        <header class="text-center page-header">
+            <h1>Vestibular/Concurso 2026</h1>
+            <h2>Formulário de Inscrição</h2>
+        </header>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <div class="form-wrapper">
+                    <div class="well">
+                        <p><strong>Aviso Importante:</strong> Este formulário destina-se à coleta de dados para a sua inscrição. Preencha todas as informações com atenção. Os campos marcados com <strong>*</strong> são obrigatórios.</p>
+                    </div>
+
+                    <form id="form-inscricao" method="post">
+                       
+                        <fieldset>
+                            <legend><i class="glyphicon glyphicon-user"></i> Identificação do Candidato</legend>
+                            <div class="form-group">
+                                <label for="Nome">Nome Completo *</label>
+                                <input type="text" id="Nome" name="Nome" class="form-control" placeholder="Digite seu nome completo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="CPF">CPF *</label>
+                                <input type="text" id="CPF" name="CPF" class="form-control" placeholder="000.000.000-00" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-8 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="Documento">Nº do Documento (RG) *</label>
+                                        <input type="text" id="Documento" name="Documento" class="form-control" placeholder="Apenas números" required>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4 col-xs-12">
+                                    <div class="form-group">
+                                        <label for="OrgaoEmissor">Órgão Emissor *</label>
+                                        <select id="OrgaoEmissor" name="OrgaoEmissor" class="form-control" required>
+                                            <option value="">Selecione</option>
+                                            <option value="SSP/SP">SSP/SP</option>
+                                            <option value="SSP/RJ">SSP/RJ</option>
+                                            <option value="Outros">Outros</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><i class="glyphicon glyphicon-home"></i> Endereço</legend>
+                            <div class="form-group">
+                                <label for="EndCEP">CEP *</label>
+                                <input type="text" id="EndCEP" name="EndCEP" class="form-control" placeholder="00000-000" required>
+                            </div>
+                            </fieldset>
+
+                        <fieldset>
+                            <legend><i class="glyphicon glyphicon-phone-alt"></i> Contato</legend>
+                            <div class="form-group">
+                                <label for="FoneCelular">Telefone Celular *</label>
+                                <input type="tel" id="FoneCelular" name="FoneCelular" class="form-control" placeholder="(00) 90000-0000" required>
+                            </div>
+                             <div class="form-group">
+                                <label for="Email">E-mail *</label>
+                                <input type="email" id="Email" name="Email" class="form-control" placeholder="seu.email@exemplo.com" required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><i class="glyphicon glyphicon-list-alt"></i> Preferências e Necessidades Especiais</legend>
+
+                            <div class="form-group">
+                                <label for="cidade_prova">Cidade de Realização da Prova *</label>
+                                <select class="form-control" id="cidade_prova" name="cidade_prova" required>
+                                    <option value="">Selecione a cidade</option>
+                                    <option value="Sao Paulo">São Paulo - SP</option>
+                                    <option value="Rio de Janeiro">Rio de Janeiro - RJ</option>
+                                    <option value="Belo Horizonte">Belo Horizonte - MG</option>
+                                    <option value="Curitiba">Curitiba - PR</option>
+                                    <option value="Salvador">Salvador - BA</option>
+                                </select>
+                            </div>
+
+                             <div class="form-group">
+                                <label>Horário de Preferência para a Prova *</label>
+                                <div class="radio">
+                                    <label class="radio-inline"><input type="radio" name="horario_prova" value="manha" required> Manhã (8h às 12h)</label>
+                                    <label class="radio-inline"><input type="radio" name="horario_prova" value="tarde"> Tarde (14h às 18h)</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Você é canhoto(a)? *</label>
+                                <div class="radio">
+                                    <label class="radio-inline"><input type="radio" name="mao_predominante" value="nao" required checked> Não</label>
+                                    <label class="radio-inline"><input type="radio" name="mao_predominante" value="sim"> Sim (para prepararmos uma carteira adequada)</label>
+                                </div>
+                            </div>
+                           
+                            <div class="form-group">
+                                <label>Necessita de condição especial para a prova? *</label>
+                                <div class="radio">
+                                    <label class="radio-inline"><input type="radio" name="necessidade_especial" value="nao" required checked> Não</label>
+                                    <label class="radio-inline"><input type="radio" name="necessidade_especial" value="sim"> Sim</label>
+                                </div>
+                            </div>
+                           
+                            <div class="form-group" id="campo-necessidade-especifica" style="display: none;">
+                                <label for="descricao_necessidade">Por favor, descreva sua necessidade:</label>
+                                <textarea class="form-control" id="descricao_necessidade" name="descricao_necessidade" rows="4" placeholder="Ex: Prova com fonte ampliada, auxílio para transcrição, sala de fácil acesso, etc."></textarea>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend><i class="glyphicon glyphicon-check"></i> Opção de Curso</legend>
+                             <div class="form-group">
+                                <label for="selectOpcao">Escolha o curso desejado *</label>
+                                <select class="form-control" id="selectOpcao" name="selectOpcao" required>
+                                    <option value="">Selecione uma opção</option>
+                                    <option value="medicina">Medicina</option>
+                                    <option value="enfermagem">Enfermagem</option>
+                                    <option value="psicologia">Psicologia</option>
+                                </select>
+                            </div>
+                        </fieldset>
+
+                        <hr>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Finalizar Inscrição</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Executa o código quando o conteúdo da página estiver totalmente carregado
+        document.addEventListener('DOMContentLoaded', function() {
+            // Pega os botões de rádio da pergunta sobre necessidade especial
+            const radiosNecessidade = document.querySelectorAll('input[name="necessidade_especial"]');
+           
+            // Pega o campo de texto que deve aparecer/desaparecer
+            const campoEspecifico = document.getElementById('campo-necessidade-especifica');
+           
+            // Adiciona um "ouvinte" para cada botão de rádio
+            radiosNecessidade.forEach(function(radio) {
+                radio.addEventListener('change', function() {
+                    // Se o botão "Sim" estiver marcado, mostra o campo de texto
+                    if (this.value === 'sim') {
+                        campoEspecifico.style.display = 'block';
+                    } else {
+                        // Caso contrário (se "Não" estiver marcado), esconde o campo de texto
+                        campoEspecifico.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

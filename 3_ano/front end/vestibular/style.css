@@ -1,0 +1,84 @@
+/* Estilos Gerais */
+body {
+    background-color: #f4f7f6; /* Um fundo cinza claro para conforto visual */
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Contêiner Principal */
+.main-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px 40px 40px;
+}
+
+/* Cabeçalho */
+.page-header {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+}
+
+.page-header h2 {
+    font-size: 20px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Wrapper do Formulário */
+.form-wrapper {
+    margin-top: 20px;
+}
+
+/* Legendas das seções */
+fieldset legend {
+    font-size: 20px;
+    font-weight: bold;
+    color: #005a9c; /* Um azul escuro para destaque */
+    border-bottom: 2px solid #005a9c;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+fieldset {
+    margin-bottom: 30px; /* Espaçamento entre as seções */
+}
+
+/* Estilo para os campos do formulário */
+.form-control {
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    height: 40px; /* Altura padrão para os campos */
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* Estilo para radios e checkboxes */
+.radio-inline {
+    margin-right: 20px;
+}
+
+
+/* Botão de Finalizar */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
